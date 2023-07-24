@@ -21,4 +21,11 @@ return {
       require("nvim-surround").setup()
     end,
   },
+  {
+    "declancm/cinnamon.nvim",
+    config = function()
+      require("cinnamon").setup()
+    end,
+    lazy = false,
+  },
 }
