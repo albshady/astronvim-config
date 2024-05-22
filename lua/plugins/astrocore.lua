@@ -67,5 +67,17 @@ return {
         -- ["<C-S>"] = false,
       },
     },
+    autocmds = {
+      reset_cursor = {
+        clear = true,
+        {
+          event = { "VimLeave" },
+          desc = "Reset cursor to underscore when leaving editor",
+          callback = function()
+            vim.api.nvim_command('set guicursor=a:hor90')
+          end,
+        },
+      },
+    },
   },
 }
