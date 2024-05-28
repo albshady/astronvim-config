@@ -27,7 +27,7 @@ return {
     -- Configure sources based on the presence of ruff in pyproject.toml
     if use_ruff then
       config.sources = {
-        null_ls.builtins.formatting.black,
+        require("none-ls.formatting.ruff_format"),
         require("none-ls.formatting.ruff"),
         require("none-ls.diagnostics.ruff"),
       }
