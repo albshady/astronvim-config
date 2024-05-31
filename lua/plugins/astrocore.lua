@@ -61,6 +61,7 @@ return {
         },
 
         ["<leader>gL"] = { function() require("gitblame").toggle() end, desc = "Toggle git blame" },
+        ["<leader>rl"] = { "<cmd>RepoLink!<cr>", desc = "Copy URL to the line in the repo" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -69,6 +70,9 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
+      v = {
+        ["<leader>rl"] = { "<cmd>RepoLink<cr>", desc = "Print URL to the lines in the repo" }
+      }
     },
     autocmds = {
       reset_cursor = {
